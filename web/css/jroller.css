@@ -188,6 +188,10 @@ html, body
     line-height: 1.4;
 }
 
+#meta h1 .ui-button .ui-button-text {
+    font-weight: bold;
+}
+
 #header h1{
   font-size: 11px;
   margin-left: 25px;
