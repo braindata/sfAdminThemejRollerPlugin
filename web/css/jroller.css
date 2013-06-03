@@ -165,3 +165,317 @@ html { overflow: -moz-scrollbars-vertical !important; }
 
 .ui-tabs-vertical .ui-tabs-nav li.ui-tabs-selected { padding-bottom: 0; padding-right: .1em; border-right-width: 1px; border-right-width: 1px; }
 .ui-tabs-vertical .ui-tabs-panel { float: left; width: 70%; padding: 1em 1%; margin: 0 0 0 2%; }
+
+/* jQuery UI */
+
+.ui-button-text-only .ui-button-text { padding: .1em .5em; }
+.ui-tabs .ui-tabs-hide { display: none !important; }
+
+/* Custom Code */
+
+html, body
+{
+  background: none;
+  margin: 0px;
+  padding: 0px;
+  font-family: tahoma, verdana, helvetica;
+}
+
+#meta{
+  display: block;
+}
+
+#header h1{
+  font-size: 12px;
+  margin-left: 25px;
+  font-weight: bold;
+  float: left;
+}
+
+#header h1 a{
+  color: black;
+  font-weight: bold;
+}
+
+.sf_admin_text input, textarea, select{
+  padding: 3px 5px;
+  font-size: 12px !important;
+}
+
+.sf_admin_text input[type='text']{
+  width: 400px;
+}
+
+.ui-dialog input[type='text']{
+  width: 300px;
+  padding: 3px 5px;
+  font-size: 12px !important;
+}
+
+.ui-dialog textarea{
+  width: 300px;
+  height: 200px;
+  font-size: 12px !important;
+}
+
+.ui-tabs .ui-tabs-nav li a {
+  font-size: 12px !important;
+  padding: 5px 10px !important;
+}
+
+
+#sf_admin_form_tab_menu .ui-tabs-panel{
+  border-top: none !important;
+}
+
+.sf_admin_form_row .label label{
+  font-size: 12px !important;
+}
+
+div.translation.ui-widget-content
+{
+  background: none;
+  background-color: #EFEFEF;
+}
+
+.sf_admin_form_row ul {
+  list-style-type: none;
+}
+
+div.translation .sf_admin_form_row .label label{
+  font-size: 11px;
+}
+
+.sf_admin_text div.translation input, .sf_admin_text  div.translation textarea, .sf_admin_text div.translation select {
+  margin-top: 0px;
+}
+
+.translation_box div.translation_label > label{
+  font-style: italic;
+  font-size: 12px;
+}
+
+.translation_box > label{
+  font-style: italic;
+  font-size: 12px;
+}
+
+div.outer > label.headline{
+  background-color: silver;
+  padding: 3px;
+  padding-left: 6px;
+  padding-right: 6px;
+  font-size: 14px;
+}
+
+#sf_admin_container div.outer ul{
+  border: 1px solid silver;
+  background-color: #EFEFEF;
+  background-image: none;
+  padding: 5px;
+  list-style: none;
+  margin-bottom: 10px;
+  display: block;
+  color: black;
+  width: auto;
+  font-weight: normal;
+}
+
+div.outer > ul > li{
+  padding: 5px;
+}
+
+div.outer > ul > li label{
+  display: block;
+}
+
+div.outer > ul > li label.headline{
+  font-style: italic;
+  font-size: 12px;
+  margin-bottom: 3px;
+  font-weight: bold;
+}
+
+div.outer > ul > li table{
+  border: 1px solid silver;
+  background-color: #EFEFEF;
+  padding: 5px;
+  margin-bottom:10px;
+}
+
+#header
+{
+  background-repeat: repeat-x;
+  background-position: top;
+  min-height: 50px;
+}
+
+#header.ui-widget-header
+{
+  border: none;
+}
+
+#header img{
+  margin: 20px;
+  margin-top: 10px;
+  margin-bottom: 0px;
+  margin-left: 25px;
+  border: none;
+}
+
+#container
+{
+  width: 100%;
+  background: none;
+}
+
+#content
+{
+  margin-top: 10px;
+}
+
+
+#menu
+{
+  padding: 5px !important;;
+  padding-left: 20px !important;;
+  border-bottom: 1px solid #8e846b;
+  padding-bottom: 3px;
+}
+
+#menu ul
+{
+  float: left;
+  margin: 3px !important;
+  margin-left: 5px !important;
+  height: 24px !important;
+}
+
+#menu ul li.active a
+{
+  color: black;
+  font-weight: bold;
+  background: none;
+  background-color: white !important;
+}
+
+#menu .ui-state-hover a, .ui-state-hover a:hover {
+  color: #CC0303;
+}
+
+#menu li.ui-state-hover {
+  border: None;
+  background: none;
+}
+
+
+#login
+{
+  float: left;
+  margin-left: 20px;
+}
+
+
+#login a
+{
+  padding: 1px 5px;
+
+}
+
+
+
+#menu li
+{
+  padding: 0px;
+  margin: 0px;
+  display: inline;
+  color: white;
+  font-size: 11px !important;
+  float: left;
+}
+
+
+
+td, th
+{
+  padding: 2px;
+  padding-right: 4px;
+}
+
+.sf_admin_filter td {
+  padding: 3px;
+  padding-bottom: 3px;
+}
+
+th
+{
+  font-weight: bold;
+  text-align: right;
+}
+
+#footer
+{
+  clear: both;
+  padding: 25px;
+  margin-top: 0;
+  height: auto;
+  font-family: arial,sans-serif;
+  font-size: 80%;
+  float: right;
+  color: #666;
+  background: none;
+}
+
+#footer img
+{
+  vertical-align: middle;
+}
+
+#sf_admin_container fieldset h2
+{
+  font-size: 110%;
+  font-family: arial,sans-serif;
+  font-style: italic;
+}
+
+.sf_admin_form_field_logo div div
+{
+  margin-left: 0px;
+}
+
+.sf_admin_form_field_logo img
+{
+  width: 200px;
+}
+
+#sf_admin_container .sf_admin_form_field_logo div div label
+{
+  display: inline;
+  float: none;
+}
+
+#header h1
+{
+  width: auto;
+}
+
+.sf_admin_form_field_form_authors p{
+  font-size: 12px;
+  color: grey;
+  margin-bottom: 5px;
+  line-height: 16px;
+}
+
+.sf_admin_form_field_form_authors p strong{
+  display: block;
+}
+
+.sf_admin_form_field_form_authors p span.warning{
+  color: #cc0000;
+}
+
+.sf_admin_form_field_form_authors ul{
+  padding-left: 20px !important;
+  font-size: 12px;
+}
+

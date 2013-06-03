@@ -106,8 +106,10 @@ jQuery().ready(function(){
 	if ($('.sf_admin_form').length)
 	{
     // tabs for form edition
-    $('#sf_admin_form_tab_menu').tabs().addClass('ui-tabs-vertical ui-helper-clearfix');
-    $('#sf_admin_form_tab_menu li').removeClass('ui-corner-top').addClass('ui-corner-all');
+    $('#sf_admin_form_tab_menu').tabs().removeClass('ui-widget-content');// //addClass('ui-tabs-vertical ui-helper-clearfix');
+    //$('#sf_admin_form_tab_menu li').removeClass('ui-corner-top').addClass('ui-corner-all');
+    $( "#sf_admin_form_tab_menu > ul" ).removeClass("ui-corner-all").addClass("ui-corner-top");
+    $( "#sf_admin_form_tab_menu .ui-tabs-panel" ).removeClass("ui-corner-all");
 
     // default size for input
     $('input[type="text"], input[type="password"]').each(function(){
