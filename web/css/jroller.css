@@ -108,7 +108,7 @@ html { overflow: -moz-scrollbars-vertical !important; }
   .sf_admin_actions_form { float: right; margin-right: .2em !important; list-style-type: none; white-space: nowrap; }
     .sf_admin_actions_form li { display: block; float: left; }
       .sf_admin_actions_form li a,
-      .sf_admin_actions_form li button { margin: 0; }
+      .sf_admin_actions_form li button { margin: 0; padding: .4em; font-size: 1.2em !important;}
 
     /* return to list button */
     .sf_admin_actions_form .sf_admin_action_list { position: absolute; left: .4em; }
@@ -168,6 +168,7 @@ html { overflow: -moz-scrollbars-vertical !important; }
 
 /* jQuery UI */
 .ui-tabs .ui-tabs-hide { display: none !important; }
+.ui-button .ui-button-text { line-height: 1;}
 
 /* Custom Code */
 
