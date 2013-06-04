@@ -58,14 +58,10 @@ jQuery().ready(function(){
 				$('#sf_admin_filter_button').addClass('ui-state-active');
 			},
 			buttons: {
-				"Filter": function() { 
+				"Suchen": function() { 
 					$(this).dialog("close"); 
 					$('#sf_admin_filter_submit').parents('form').submit();
 				}, 
-				"Reset": function() { 
-					$(this).dialog("close");
-					location.href = $('#sf_admin_filter_reset').attr('href');
-				} 
 			}
 		});
 
