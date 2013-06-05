@@ -168,7 +168,10 @@ html { overflow: -moz-scrollbars-vertical !important; }
 
 /* jQuery UI */
 .ui-tabs .ui-tabs-hide { display: none !important; }
-.ui-button .ui-button-text { line-height: 1;}
+.ui-button .ui-button-text { line-height: 1; font-size: 12px;}
+.ui-button-text-icon-primary .ui-button-text, .ui-button-text-icons .ui-button-text {
+    padding: 0.2em 1em 0.2em 2.1em;
+}
 
 /* Custom Code */
 
