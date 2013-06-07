@@ -172,6 +172,7 @@ html { overflow: -moz-scrollbars-vertical !important; }
 .ui-button-text-icon-primary .ui-button-text, .ui-button-text-icons .ui-button-text {
     padding: 0.2em 1em 0.2em 2.1em;
 }
+.ui-helper-hidden-accessible{ position: absolute !important; clip: auto !important; }
 
 /* Custom Code */
 
