@@ -173,6 +173,7 @@ html { overflow: -moz-scrollbars-vertical !important; }
     padding: 0.2em 1em 0.2em 2.1em;
 }
 .ui-helper-hidden-accessible{ position: absolute !important; clip: auto !important; }
+.ui-datepicker-inline{ display: block !important;}
 
 /* Custom Code */
 
@@ -225,9 +226,13 @@ html, body
 }
 
 .ui-dialog textarea{
-  width: 300px;
+  width: 95%;
   height: 200px;
   font-size: 12px !important;
+}
+
+.ui-dialog ul{
+  list-style-type: none;
 }
 
 .ui-tabs .ui-tabs-nav li a {
