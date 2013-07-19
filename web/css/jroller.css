@@ -421,8 +421,20 @@ td, th
 
 .sf_admin_filter td {
   padding: 3px;
-  padding-bottom: 3px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  border: 1px solid white;
+  background-color: #eee;
 }
+
+.sf_admin_filter hr {
+  border: 1px solid transparent;
+}
+
+.sf_admin_filter table {
+  border: 1px solid #eee;
+}
+
 
 th
 {
