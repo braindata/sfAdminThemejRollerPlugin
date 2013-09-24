@@ -64,6 +64,21 @@ jQuery().ready(function(){
 				}, 
 			}
 		});
+    
+    
+   // boolean change
+   
+    $('body').on("click", '.sf_admin_boolean a', function(){
+      
+      var $target = $(this);
+      var url = $target.attr("href");
+      var $cell = $target.parent();
+      
+      $cell.html("--");
+		  $cell.load( url);
+      
+      return false;
+		});
 
 		// toggle table visibility on caption title
 		$('.sf_admin_list caption h1').click(function(){
