@@ -68,7 +68,7 @@ jQuery().ready(function(){
     
    // boolean change
    
-    $('body').on("click", '.sf_admin_boolean a', function(){
+   $('body').on("click", '.sf_admin_boolean a', function(){
       
       var $target = $(this);
       var url = $target.attr("href");
