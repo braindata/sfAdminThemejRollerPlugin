@@ -5,7 +5,7 @@ all:
 
     # use the javascript packaged jQuery / jQuery UI of plugin
     # you can turn use_jquery to false and include your own lib version
-    use_jquery:     true
+    use_jquery:     false
 
     # specify the jQuery UI theme folder
     theme_dir:      /sfAdminThemejRollerPlugin/css/jquery
