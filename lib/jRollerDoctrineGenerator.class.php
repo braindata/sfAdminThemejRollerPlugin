@@ -59,7 +59,7 @@ class jRollerDoctrineGenerator extends sfDoctrineGenerator
     }
     else if ('Boolean' == $field->getType())
     {
-      $html = sprintf("get_partial('%s/list_field_boolean', array('value' => %s))", $this->getModuleName(), $html);
+      $html = sprintf("get_partial('%s/list_field_boolean', array('value' => %s, 'id' => %s, 'name' => '%s', 'module' => '%s'))", $this->getModuleName(), $html, $this->getColumnGetter('id', true), $field->getName(), $this->getModuleName());
     }
 
     if ($field->isLink())
