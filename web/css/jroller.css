@@ -508,3 +508,7 @@ th
   font-size: 12px;
 }
 
+input[readonly]{
+  color: darkgrey;
+}
+
