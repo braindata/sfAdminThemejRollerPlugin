@@ -118,7 +118,7 @@ html { overflow: -moz-scrollbars-vertical !important; }
     #sf_admin_form_tab_menu .ui-tabs-panel { border-width: 1px; }
 
   /* default inputs styles */
-  .sf_admin_text input, textarea, select { margin: 0.5em 0; border: 2px solid #bbb; }
+  .sf_admin_text input, .sf_admin_foreignkey input, textarea, select { margin: 0.5em 0; border: 2px solid #bbb; }
   .sf_admin_text input[type=text]:focus, .sf_admin_text input[type=password]:focus, textarea:focus, select:focus {
     border-color: #333;
   }
@@ -210,12 +210,12 @@ html, body
   font-weight: bold;
 }
 
-.sf_admin_text input, textarea, select{
+.sf_admin_text input, .sf_admin_foreignkey input, textarea, select{
   padding: 3px 5px;
   font-size: 12px !important;
 }
 
-.sf_admin_text input[type='text']{
+.sf_admin_text input[type='text'], .sf_admin_foreignkey input[type='text']{
   width: 400px;
 }
 
