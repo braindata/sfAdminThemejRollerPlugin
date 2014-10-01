@@ -15,19 +15,19 @@ class Base<?php echo ucfirst($this->getModuleName()) ?>GeneratorHelper extends s
   public function linkToShow($object, $params)
   {
     $params = $this->addClass('show', $params);
-    return '<li class="sf_admin_action_show">'.link_to(__($params['label'], array(), 'sf_admin'), $this->getUrlForAction('show'), $object, $params['params']).'</li>';
+    return '<li class="sf_admin_action_show">'.link_to(__($params['label'], array(), 'sf_admin').UIHelper::addIcon($params), $this->getUrlForAction('show'), $object, $params['params']).'</li>';
   }
 
   public function linkToNew($params)
   {
     $params = $this->addClass('new', $params);
-    return '<li class="sf_admin_action_new">'.link_to(__($params['label'] , array(), 'sf_admin'), '@'.$this->getUrlForAction('new'), $params['params']).'</li>';
+    return '<li class="sf_admin_action_new">'.link_to(__($params['label'] , array(), 'sf_admin').UIHelper::addIcon($params), '@'.$this->getUrlForAction('new'), $params['params']).'</li>';
   }
 
   public function linkToEdit($object, $params)
   {
     $params = $this->addClass('edit', $params);
-    return '<li class="sf_admin_action_edit">'.link_to(__($params['label'], array(), 'sf_admin'), $this->getUrlForAction('edit'), $object, $params['params']).'</li>';
+    return '<li class="sf_admin_action_edit">'.link_to(__($params['label'], array(), 'sf_admin').UIHelper::addIcon($params), $this->getUrlForAction('edit'), $object, $params['params']).'</li>';
   }
 
   public function linkToDelete($object, $params)

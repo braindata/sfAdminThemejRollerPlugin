@@ -1,4 +1,7 @@
-jQuery().ready(function(){	
+jQuery().ready(function(){
+
+  $("#sf_admin_actions_menu_list").buttonset();
+  $("#sf_admin_actions_menu_list a").button();
 
 	// theme switcher
 	if ($('#switcher').length)

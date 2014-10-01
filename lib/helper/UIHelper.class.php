@@ -46,8 +46,12 @@ class UIHelper
    * @return string
    * @static
    */
-  static public function addIcon(array $params)
+  static public function addIcon(array $params, $default = null)
   {
+    if($default !== null && empty($params['ui-icon'])) {
+      $params['ui-icon'] = $default;
+    }
+
     if (!empty($params['ui-icon']))
     {
       return sprintf('<span class="ui-icon ui-icon-%s"></span>', $params['ui-icon']);

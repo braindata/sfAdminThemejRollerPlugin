@@ -9,11 +9,32 @@ html { overflow: -moz-scrollbars-vertical !important; }
 .sf_admin_actions { margin: 0; padding: 0; list-style-type: none; }
   .sf_admin_actions li { display: inline; }
 
+
+#sf_admin_actions_menu_list li {
+  list-style: none;
+  float: left;
+}
+
+#sf_admin_actions_menu_list a {
+  background-position: 0;
+}
+
+#sf_admin_actions_menu_list a span.ui-icon {
+  position: absolute;
+  top: 4px;
+  left: 5px;
+}
+
+#sf_admin_actions_menu_list a span.ui-button-text {
+  padding: 0.6em 1em 0.6em 2.1em;
+}
+
 /* flash messages */
 .sf_admin_flashes { margin: 10px 0; font-size: 1.15em; font-weight: bold; }
 .sf_admin_flashes div.ui-state-error, .sf_admin_flashes div.ui-state-highlight, .sf_admin_flashes div.ui-state-success {
 	padding: 10px;
 }
+
 
 #sf_admin_container { position: relative; padding-bottom: .5em; }
   #sf_admin_container .ui-widget-header h1 {
