@@ -544,6 +544,7 @@ body {
 }
 
 #dashboard form button {
+  margin-top: 5px;
   float: right;
 }
 
