@@ -533,3 +533,85 @@ input[readonly]{
   color: darkgrey;
 }
 
+body {
+  background-color: #f8f8f8;
+}
+
+#dashboard {
+  display: flex;
+  width: 100%;
+  padding: 20px;
+}
+
+#dashboard form button {
+  float: right;
+}
+
+#dashboard form input {
+  min-width: 180px;
+}
+
+#dashboard .ui-button {
+  border: none;
+}
+
+#dashboard, #dashboard .usercard, #dashboard .widgets_wrapper {
+  box-sizing: border-box;
+}
+
+#dashboard .usercard {
+  flex: 0 0 400px;
+  vertical-align: top;
+  font-size: 14px;
+}
+
+#dashboard .usercard h3 {
+  margin-top: 20px;
+  padding: 5px;
+}
+
+#dashboard .usercard h3:first-child {
+  margin-top: 0;
+}
+
+#dashboard .usercard h3 .ui-button {
+  float: right;
+  margin-top: -1px;
+}
+
+#dashboard .usercard label {
+  display: inline-block;
+  width: 125px;
+}
+
+#dashboard .usercard .row {
+  padding: 0 5px;
+  margin: 5px 0;
+}
+
+#dashboard .usercard section {
+  margin: 10px 0;
+}
+
+#dashboard .usercard .widget_container {
+  width: 100%;
+}
+
+#dashboard .widgets_wrapper .widget_container  {
+  flex-basis: 50%;
+  padding: 0  0 20px 20px;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#dashboard .widget_container .sf_admin_list {
+  margin: 0;
+}
+
+#dashboard .widget_container caption h1 {
+  float: left;
+}
+
+#dashboard .widget_container caption .ui-button {
+  margin-top: -1px;
+}
