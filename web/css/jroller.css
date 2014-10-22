@@ -553,7 +553,15 @@ body {
 }
 
 #dashboard .ui-button {
-  border: none;
+  border-width: 0px;
+}
+
+#dashboard .ui-button.ui-corner-right {
+  border-left-width: 1px;
+}
+
+#dashboard .ui-button.ui-corner-left {
+  border-right-width: 1px;
 }
 
 #dashboard, #dashboard .usercard, #dashboard .widgets_wrapper {
@@ -583,6 +591,10 @@ body {
 #dashboard .usercard label {
   display: inline-block;
   width: 125px;
+}
+
+#dashboard .usercard .row-group {
+  margin: 15px 0;
 }
 
 #dashboard .usercard .row {
