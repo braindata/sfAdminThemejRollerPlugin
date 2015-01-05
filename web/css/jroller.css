@@ -621,6 +621,18 @@ body {
   margin: 0;
 }
 
+#dashboard .widgets_wrapper .widget_container.col-33 {
+  width: 33.333333333%;
+}
+
+#dashboard .widgets_wrapper .widget_container.col-66 {
+  width: 66.666666666%;
+}
+
+#dashboard .widgets_wrapper .widget_container.col-100 {
+  width: 100%;
+}
+
 #dashboard .widgets_wrapper .flex-row {
   display: -ms-flex;
   display: -webkit-flex;
@@ -639,6 +651,7 @@ body {
 
 #dashboard .widget_container .sf_admin_list table tbody tr.sf_admin_row td {
   word-break: break-all;
+  height: 48px;
 }
 
 #dashboard .widget_container caption h1 {

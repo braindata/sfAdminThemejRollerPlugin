@@ -3,6 +3,20 @@ jQuery().ready(function(){
   $("#sf_admin_actions_menu_list").buttonset();
   $("#sf_admin_actions_menu_list a").button();
 
+	$(window).on('load', function () {
+		var widgets = $('#dashboard div.sf_admin_list.ui-grid-table');
+		var heights = [];
+
+		widgets.each(function(idx) {
+			heights[idx] = $(this).parent('.widget_container').height();
+		});
+
+		$.each(heights, function( idx, height ) {
+			$(widgets.get(idx)).find('table').height(height - 30); // Caption height will not calculate in total height
+		});
+
+	});
+
 	// theme switcher
 	if ($('#switcher').length)
 	{
