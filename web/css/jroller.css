@@ -537,6 +537,7 @@ body {
   background-color: #f8f8f8;
 }
 
+
 #dashboard {
   display: -webkit-flex;
   display: -ms-flex;
@@ -664,6 +665,10 @@ body {
   word-break: break-all;
 }
 
+.normal-word-break {
+  word-break: normal !important;
+}
+
 #dashboard .widget_container caption h1 {
   float: left;
 }
@@ -671,6 +676,8 @@ body {
 #dashboard .widget_container caption .ui-button {
   margin-top: -1px;
 }
+
+
 
 /* Medium devices */
 @media (max-width: 1439px) {
