@@ -568,6 +568,9 @@ body {
 
 #dashboard, #dashboard .usercard, #dashboard .widgets_wrapper {
   box-sizing: border-box;
+  -ms-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
 }
 
 #dashboard .usercard {
@@ -649,9 +652,16 @@ body {
   margin: 0;
 }
 
+#dashboard .widget_container .sf_admin_list table thead {
+  height: 16px;
+}
+
+#dashboard .widget_container .sf_admin_list table tfoot {
+  height: 13px;
+}
+
 #dashboard .widget_container .sf_admin_list table tbody tr.sf_admin_row td {
   word-break: break-all;
-  height: 48px;
 }
 
 #dashboard .widget_container caption h1 {

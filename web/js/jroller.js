@@ -1,5 +1,9 @@
 jQuery().ready(function(){
 
+	// Browser switching
+	$.browser.msie = /msie/.test(navigator.userAgent.toLowerCase());
+	$.browser.mozilla = /firefox/.test(navigator.userAgent.toLowerCase());
+
   $("#sf_admin_actions_menu_list").buttonset();
   $("#sf_admin_actions_menu_list a").button();
 
@@ -13,6 +17,9 @@ jQuery().ready(function(){
 
 		$.each(heights, function( idx, height ) {
 			$(widgets.get(idx)).find('table').height(height - 30); // Caption height will not calculate in total height
+			if($.browser.mozilla) {
+				$(widgets.get(idx)).find('table tbody').height(height - 40); // For FireFox :-<
+			}
 		});
 
 	});
