@@ -1,4 +1,53 @@
 html { overflow: -moz-scrollbars-vertical !important; }
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.clearfix:after {
+  clear: both;
+}
+
+.no-padding {
+  padding: 0 !important;
+}
+
+.force-center-element {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+img.responsive {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.media-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+
+.media-row .media-box {
+  width: 25%;
+  box-sizing: border-box;
+  padding: 5px;
+}
+
+.media-row .media-box .media-box-inner:hover {
+  background-color: #dddddd;
+}
+
+.media-row .media-box .media-box-inner {
+  background-color: #eeeeee;
+  padding: 10px;
+}
 
 .floatleft { float: left; }
 .floatright { float: right; }
