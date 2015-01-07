@@ -26,7 +26,9 @@ $last = $first + $pager->getMaxPerPage() - 1;
 
               <td align="center">
                 [?php echo __('Page') ?]
-                <input type="text" name="page" value="[?php echo $pager->getPage() ?]" maxlength="7" size="2" />
+                <form action="[?php echo url_for('@<?php echo $this->getUrlForAction('list') ?>') ?]" method="get">
+                <input type="text" name="page" value="[?php echo $pager->getPage() ?]" data-url="[?php echo url_for('@<?php echo $this->getUrlForAction('list') ?>') ?]" maxlength="7" size="2" />
+                </form>
                 [?php echo __('of %1%', array('%1%' => $pager->getLastPage())) ?]
             	</td>
 
