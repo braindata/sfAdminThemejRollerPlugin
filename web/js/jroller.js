@@ -109,6 +109,17 @@ jQuery().ready(function(){
       var table = $(this).parents('table');
       table.find('thead, tbody, tfoot').toggle();
 
+			var tableHeight;
+			if(table.data('old-height')) {
+				tableHeight = table.data('old-height');
+				table.data('old-height', 0);
+			} else {
+				tableHeight = 'auto';
+				table.data('old-height', table.get(0).style.height);
+			}
+
+			table.css('height', tableHeight);
+
 		  //$('.sf_admin_list table tbody, .sf_admin_list table thead, .sf_admin_list table tfoot').toggle();
 		});
 
