@@ -26,7 +26,7 @@
       $this->forward(sfConfig::get('sf_secure_module'), sfConfig::get('sf_secure_action'));
     }
 
-    $validator = new sfValidatorDoctrineChoice(array('model' => '<?php echo $this->getModelClass() ?>'));
+    $validator = new sfValidatorDoctrineChoice(array('multiple' => true, 'model' => '<?php echo $this->getModelClass() ?>'));
     try
     {
       // validate ids
@@ -47,20 +47,21 @@
   {
     $ids = $request->getParameter('ids');
 
-    $count = Doctrine_Query::create()
-      ->delete()
+    $records = Doctrine_Query::create()
       ->from('<?php echo $this->getModelClass() ?>')
       ->whereIn('<?php echo $this->getPrimaryKeys(true) ?>', $ids)
       ->execute();
 
-    if ($count >= count($ids))
-    {
-      $this->getUser()->setFlash('notice', 'The selected items have been deleted successfully.');
-    }
-    else
-    {
-      $this->getUser()->setFlash('error', 'A problem occurs when deleting the selected items.');
+    foreach ($records as $record) {
+      try {
+        $this->dispatcher->notify(new sfEvent($this, 'admin.delete_object', array('object' => $record)));
+        $record->delete();
+      } catch (Exception $e) {
+        $this->getUser()->setFlash('error', 'The entry with the id ' . $record->getId() . ' can not deleted');
+        $this->redirect('@<?php echo $this->getUrlForAction('list') ?>');
+      }
     }
 
+    $this->getUser()->setFlash('notice', 'The selected items have been deleted successfully.');
     $this->redirect('@<?php echo $this->getUrlForAction('list') ?>');
   }
