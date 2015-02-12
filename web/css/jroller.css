@@ -604,7 +604,30 @@ body {
   background-color: #f8f8f8;
 }
 
+/* Sortable list */
+.is-sortable {
+  overflow: scroll;
+  list-style: none;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+}
 
+.is-sortable:hover {
+  cursor: move;
+}
+
+.is-sortable.on-load {
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.is-sortable.error li {
+  background: rgba(255, 0, 0, 0.3) !important;
+  pointer-events: none;
+}
+
+
+/* Dashboard */
 #dashboard {
   display: -webkit-flex;
   display: -ms-flex;

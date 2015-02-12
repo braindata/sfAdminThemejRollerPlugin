@@ -4,6 +4,31 @@ jQuery().ready(function(){
 	$.browser.msie = /msie/.test(navigator.userAgent.toLowerCase());
 	$.browser.mozilla = /firefox/.test(navigator.userAgent.toLowerCase());
 
+  /**
+   * Sortable tree management
+   */
+  $( "ol.is-sortable" ).sortable({
+    containment: "parent",
+    cursor: "move",
+    distance: 5,
+    tolerance: "pointer",
+    axis: "y",
+    update: function(event, ui) {
+      var list = $(this);
+      var listParams = list.sortable('serialize');
+      var url = ui.item.data('change-url');
+
+      list.addClass('on-load');
+      $.post(url, listParams)
+        .fail(function(data) {
+          list.addClass('error');
+        })
+        .always(function(){
+          list.removeClass('on-load');
+        });
+    }
+  });
+
   $("#sf_admin_actions_menu_list").buttonset();
   $("#sf_admin_actions_menu_list a").button();
 
