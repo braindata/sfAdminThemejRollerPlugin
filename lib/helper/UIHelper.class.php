@@ -18,7 +18,10 @@ class UIHelper
    */
   static public function addClasses(array $params, $extra = '')
   {
-    $uiClasses = sprintf('%s ui-state-default', $extra);
+    $extra .= (array_key_exists('ui-icon', $params) &&  $params['ui-icon']) ? sprintf(' ui-icon-%s', $params['ui-icon']) : null;
+    $extra .= (array_key_exists('secondary-state', $params) &&  $params['secondary-state']) ? ' ui-priority-secondary' : null;
+
+    $uiClasses = sprintf('ui-state-default %s', $extra);
     $uiParams  = is_array($params['params']) ? $params['params'] : sfToolkit::stringToArray($params['params']);
     $uiParams['class'] = $uiClasses;
 

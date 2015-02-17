@@ -6,7 +6,7 @@
 [?php else: ?]
 <?php endif; ?>
 <?php foreach ($this->configuration->getValue($action.'.actions') as $name => $params):
-        if (!key_exists('ui-icon', $params)) $params['ui-icon'] = '';
+    if (!array_key_exists('ui-icon', $params)) $params['ui-icon'] = '';
 		$params['params'] = UIHelper::addClasses($params);
 ?>
 <?php if ('_list' == $name): ?>
@@ -25,7 +25,7 @@
   <?php echo $this->addCredentialCondition('[?php echo $helper->linkToSave($form->getObject(), '.$this->asPhp($params).') ?]', $params) ?>
 
 <?php else: ?>
-	<?php $params['label'] .= UIHelper::addIcon($params); ?>
+	<?php //$params['label'] .= UIHelper::addIcon($params); ?>
   <li class="sf_admin_action_<?php echo $params['class_suffix'] ?>">
 [?php if (method_exists($helper, 'linkTo<?php echo $method = ucfirst(sfInflector::camelize($name)) ?>')): ?]
   <?php echo $this->addCredentialCondition('[?php echo $helper->linkTo'.$method.'($form->getObject(), '.$this->asPhp($params).') ?]', $params) ?>
