@@ -23,6 +23,7 @@
 
 <?php elseif ('_save' == $name): ?>
   <?php echo $this->addCredentialCondition('[?php echo $helper->linkToSave($form->getObject(), '.$this->asPhp($params).') ?]', $params) ?>
+  <?php echo $this->addCredentialCondition('[?php echo $helper->linkToSaveAndBack($form->getObject(), '.$this->asPhp($params).') ?]', $params) ?>
 
 <?php else: ?>
 	<?php //$params['label'] .= UIHelper::addIcon($params); ?>

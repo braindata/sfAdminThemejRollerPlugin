@@ -9,18 +9,22 @@
 
       $this->dispatcher->notify(new sfEvent($this, 'admin.save_object', array('object' => $<?php echo $this->getSingularName() ?>)));
 
-      if ($request->hasParameter('_save_and_add'))
-      {
-        $this->getUser()->setFlash('notice', $notice.' You can add another one below.');
+      switch(true) {
+        case ($request->hasParameter('_save_and_add')):
+          $notice .= ' You can add another one below.';
+          $redirectRoute = '@<?php echo $this->getUrlForAction('new') ?>';
+          break;
 
-        $this->redirect('@<?php echo $this->getUrlForAction('new') ?>');
-      }
-      else
-      {
-        $this->getUser()->setFlash('notice', $notice);
+        case ($request->hasParameter('_save_and_back')):
+          $redirectRoute = '@<?php echo $this->getUrlForAction('list') ?>';
+          break;
 
-        $this->redirect(array('sf_route' => '<?php echo $this->getUrlForAction('edit') ?>', 'sf_subject' => $<?php echo $this->getSingularName() ?>));
+        default:
+          $redirectRoute = array('sf_route' => '<?php echo $this->getUrlForAction('edit') ?>', 'sf_subject' => $<?php echo $this->getSingularName() ?>);
       }
+
+      $this->getUser()->setFlash('notice', $notice);
+      $this->redirect($redirectRoute);
     }
     else
     {

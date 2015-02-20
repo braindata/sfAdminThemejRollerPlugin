@@ -44,6 +44,7 @@ all:
       list:         arrowreturnthick-1-w
       save:         circle-check
       saveAndAdd:   circle-plus
+      saveAndBack:  circle-check
       first:        seek-first
       previous:     seek-prev
       next:         seek-next

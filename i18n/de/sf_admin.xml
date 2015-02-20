@@ -6,7 +6,11 @@
     <body>
       <trans-unit>
         <source>The selected items have been deleted successfully.</source>
-        <target>Die ausgewählten Einträge wurde gelöscht.</target>
+        <target>Die ausgewählten Einträge wurden gelöscht.</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Save and back</source>
+        <target>Speichern und Zurück</target>
       </trans-unit>
     </body>
   </file>

@@ -55,12 +55,21 @@ class Base<?php echo ucfirst($this->getModuleName()) ?>GeneratorHelper extends s
 
   public function linkToSaveAndAdd($object, $params)
   {
-    if (!$object->isNew())
-    {
+    if (!$object->isNew()){
       return '';
     }
     $params = $this->addClass('saveAndAdd', $params);
     return '<li class="sf_admin_action_save_and_add"><button type="submit" name="_save_and_add" class="'. UIHelper::getClasses($params['params']) . '">'. UIHelper::addIcon($params) . __($params['label'], array(), 'sf_admin').'</button></li>';
+  }
+
+  public function linkToSaveAndBack($object, $params)
+  {
+    if ($object->isNew()) {
+      return '';
+    }
+    $params = $this->addClass('saveAndBack', $params);
+    $params['label'] .= ' and back';
+    return '<li class="sf_admin_action_save_and_back"><button type="submit" name="_save_and_back" class="'. UIHelper::getClasses($params['params']) . '">'. UIHelper::addIcon($params) . __($params['label'], array(), 'sf_admin').'</button></li>';
   }
 
   public function getUrlForAction($action)
