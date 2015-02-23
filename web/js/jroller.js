@@ -1,3 +1,20 @@
+/**
+ * Catching errors from XHR-Requests
+ */
+jQuery(document).ajaxError(function( event, jqxhr, settings, thrownError ) {
+  console.log(event, jqxhr, settings, thrownError);
+
+  var text = '[!!] Error';
+  if(jqxhr.responseText) {
+    var data  = jQuery.parseJSON(jqxhr.responseText);
+    if(data.errorMsg) {
+      text += ': ' + data.errorMsg;
+    }
+  }
+
+  alert(text);
+});
+
 jQuery().ready(function(){
 
 	// Browser switching
