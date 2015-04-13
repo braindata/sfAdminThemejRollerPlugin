@@ -763,6 +763,10 @@ body {
   word-break: normal !important;
 }
 
+.none-word-break {
+   white-space: nowrap;
+}
+
 #dashboard .widget_container caption h1 {
   float: left;
 }
