@@ -1,6 +1,6 @@
 /**
  * Catching errors from XHR-Requests
- */
+
 jQuery(document).ajaxError(function( event, jqxhr, settings, thrownError ) {
   console.log(event, jqxhr, settings, thrownError);
 
@@ -14,6 +14,7 @@ jQuery(document).ajaxError(function( event, jqxhr, settings, thrownError ) {
 
   alert(text);
 });
+ */
 
 jQuery().ready(function(){
 
