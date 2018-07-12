@@ -142,10 +142,27 @@ jQuery().ready(function(){
       var $cell = $target.parent();
       
       $cell.html("--");
-		  $cell.load( url);
+      $cell.load( url);
       
       return false;
-		});
+    });
+
+    // boolean change
+
+    $('body').on("click", 'a.sf_archive_button', function(){
+
+        var $target = $(this);
+        var url = $target.attr("href");
+        var $cell = $target.parent();
+        var $tr = $cell.parent();
+
+        $cell.html("--");
+        $cell.load( url);
+        $tr.toggleClass('grey');
+        $tr.toggleClass('ui-state-highlight');
+
+        return false;
+    });
 
 		// toggle table visibility on caption title
 		$('.sf_admin_list caption h1').click(function(){

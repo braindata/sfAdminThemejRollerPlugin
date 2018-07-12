@@ -155,6 +155,10 @@ img.responsive {
       	text-align: left;
       	overflow: hidden;
       }
+        .sf_admin_list table tbody tr.sf_admin_row.grey,
+        .sf_admin_list table tbody tr.sf_admin_row.grey a {
+            color: grey;
+        }
 
       /* table actions */
       .sf_admin_td_actions { list-style-type: none; white-space: nowrap; }
