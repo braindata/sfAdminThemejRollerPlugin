@@ -10,6 +10,25 @@ jQuery().ready(function(){
         $("#menu ul").buttonset();
     });
 
+    // Init Dialog Prototype
+    $.ui.dialog.prototype._oldinit = $.ui.dialog.prototype._init;
+    $.ui.dialog.prototype._init = function() {
+        $(this.element).parent().css('position', 'fixed');
+        $(this.element).dialog("option",{
+            resizeStop: function(event,ui) {
+                var position = [(Math.floor(ui.position.left) - $(window).scrollLeft()),
+                    (Math.floor(ui.position.top) - $(window).scrollTop())];
+                $(event.target).parent().css('position', 'fixed');
+                // $(event.target).parent().dialog('option','position',position);
+                // removed parent() according to hai's comment (I didn't test it)
+                $(event.target).dialog('option','position',position);
+                return true;
+            }
+        });
+        this._oldinit();
+    };
+
+
     // Init Lightbox
     $("a[rel^='lightbox']").fancybox();
 
