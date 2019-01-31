@@ -33,39 +33,7 @@ jQuery().ready(function(){
     $("a[rel^='lightbox']").fancybox();
 
     // Init Translation Tabs
-    $(function() {
-        $("div.translation").parent().addClass('translation_box');
-        $("div.translation_box > div.label").addClass('translation_label');
-
-        $('div > div.translation_box').parent().each(function() {
-
-            if (!$(this).hasClass('translation_tab')) {
-                var $ul = $('<ul/>');
-                var $wrap = $("<div class='translation_tab'></div>");
-                $(this).find('div.translation_box').wrapAll($wrap);
-
-                $(this).find('div.translation_box').each(function(index) {
-                    var label = $(this).find('.translation_label').text();
-                    var name = 'translation_box_tab_' + Math.random().toString(36).replace(/[^a-z]+/g, '').substr(0, 8);
-
-                    $(this).find('.translation_label').remove();
-                    $(this).attr('id', name);
-
-                    //console.log("Name: "+name);
-                    //console.log("Label: "+label);
-
-                    var $a = $('<a>').attr("href", "#" + name).html(label);
-                    var $li = $('<li/>').append($a);
-                    $ul.append($li);
-                });
-                $(this).find('.translation_tab').prepend($ul);
-            }
-
-        });
-
-        $(".translation_tab").tabs().removeClass("ui-widget-content");
-        $(".translation_tab ul").removeClass("ui-corner-all").addClass("ui-corner-top");
-    });
+    translationTabs();
 
   /**
    * Sortable tree management
@@ -319,3 +287,37 @@ jQuery().ready(function(){
         }
       });
 });
+
+function translationTabs () {
+    $("div.translation").parent().addClass('translation_box');
+    $("div.translation_box > div.label").addClass('translation_label');
+
+    $('div > div.translation_box').parent().each(function() {
+
+        if (!$(this).hasClass('translation_tab')) {
+            var $ul = $('<ul/>');
+            var $wrap = $("<div class='translation_tab'></div>");
+            $(this).find('div.translation_box').wrapAll($wrap);
+
+            $(this).find('div.translation_box').each(function(index) {
+                var label = $(this).find('.translation_label').text();
+                var name = 'translation_box_tab_' + Math.random().toString(36).replace(/[^a-z]+/g, '').substr(0, 8);
+
+                $(this).find('.translation_label').remove();
+                $(this).attr('id', name);
+
+                //console.log("Name: "+name);
+                //console.log("Label: "+label);
+
+                var $a = $('<a>').attr("href", "#" + name).html(label);
+                var $li = $('<li/>').append($a);
+                $ul.append($li);
+            });
+            $(this).find('.translation_tab').prepend($ul);
+        }
+
+    });
+
+    $(".translation_tab").tabs().removeClass("ui-widget-content");
+    $(".translation_tab ul").removeClass("ui-corner-all").addClass("ui-corner-top");
+}
