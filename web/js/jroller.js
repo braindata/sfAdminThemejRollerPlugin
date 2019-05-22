@@ -28,10 +28,6 @@ jQuery().ready(function(){
         this._oldinit();
     };
 
-
-    // Init Lightbox
-    $("a[rel^='lightbox']").fancybox();
-
     // Init Translation Tabs
     translationTabs();
 
