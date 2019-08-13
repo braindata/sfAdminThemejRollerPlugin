@@ -302,9 +302,6 @@ function translationTabs () {
                 $(this).find('.translation_label').remove();
                 $(this).attr('id', name);
 
-                //console.log("Name: "+name);
-                //console.log("Label: "+label);
-
                 var $a = $('<a>').attr("href", "#" + name).html(label);
                 var $li = $('<li/>').append($a);
                 $ul.append($li);
