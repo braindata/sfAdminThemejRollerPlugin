@@ -580,6 +580,11 @@ th
   width: auto;
 }
 
+.sf_admin_form_row label.checkbox_list_group_label{
+    font-size: 12px;
+    line-height: 22px;
+}
+
 .sf_admin_form_field_form_authors p{
   font-size: 12px;
   color: grey;
