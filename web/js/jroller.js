@@ -156,7 +156,7 @@ jQuery().ready(function(){
       return false;
     });
 
-    // boolean change
+    // archive change
 
     $('body').on("click", 'a.sf_archive_button', function(){
 
@@ -167,7 +167,24 @@ jQuery().ready(function(){
 
         $cell.html("--");
         $cell.load( url);
-        $tr.toggleClass('grey');
+        $tr.toggleClass('td_admin_row_mark_grey');
+        $tr.toggleClass('ui-state-highlight');
+
+        return false;
+    });
+
+    // deleted_at change
+
+    $('body').on("click", 'a.sf_delete_button', function(){
+
+        var $target = $(this);
+        var url = $target.attr("href");
+        var $cell = $target.parent();
+        var $tr = $cell.parent();
+
+        $cell.html("--");
+        $cell.load( url);
+        $tr.toggleClass('td_admin_row_mark_deleted');
         $tr.toggleClass('ui-state-highlight');
 
         return false;

@@ -155,9 +155,13 @@ img.responsive {
       	text-align: left;
       	overflow: hidden;
       }
-        .sf_admin_list table tbody tr.sf_admin_row.grey,
-        .sf_admin_list table tbody tr.sf_admin_row.grey a {
+        .sf_admin_list table tbody tr.sf_admin_row.td_admin_row_mark_grey,
+        .sf_admin_list table tbody tr.sf_admin_row.td_admin_row_mark_grey a {
             color: grey;
+        }
+
+        .sf_admin_list table tbody tr.sf_admin_row.td_admin_row_mark_deleted{
+            text-decoration: line-through;
         }
 
       /* table actions */
