@@ -55,7 +55,7 @@ class jRollerDoctrineGenerator extends sfDoctrineGenerator
     }
     else if ('Date' == $field->getType())
     {
-      $html = sprintf("false !== strtotime($html) ? format_date(%s, \"%s\") : '&nbsp;'", $html, $field->getConfig('date_format', 'f'));
+      $html = sprintf("($html && false !== strtotime($html)) ? format_date(%s, \"%s\") : '-'", $html, $field->getConfig('date_format', 'f'));
     }
     else if ('Boolean' == $field->getType())
     {
