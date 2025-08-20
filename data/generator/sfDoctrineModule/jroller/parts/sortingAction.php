@@ -4,6 +4,12 @@
     {
       return;
     }
+    
+    // Validate that we have a valid column name to sort by
+    if (empty($sort[0]) || is_null($sort[0]))
+    {
+      return;
+    }
 
     $query->addOrderBy($sort[0] . ' ' . $sort[1]);
   }
@@ -22,7 +28,12 @@
 
   protected function setSort(array $sort)
   {
-    if (!is_null($sort[0]) && is_null($sort[1]))
+    // Don't set sort if column name is empty or null
+    if (empty($sort[0]) || is_null($sort[0]))
+    {
+      $sort = array(null, null);
+    }
+    elseif (!is_null($sort[0]) && is_null($sort[1]))
     {
       $sort[1] = 'asc';
     }
